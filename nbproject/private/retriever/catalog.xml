@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://xmlns.jcp.org/xml/ns/javaee" uri="192.168.250.1_6082/php/uid.php.vsys_1_rule_0_url_http_/xmlns.jcp.org/xml/ns/javaee"/>
+</catalog>

@@ -1,0 +1,199 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+
+     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="prising.css" rel="stylesheet">
+    <style type="text/css">
+      .active-cyan-3 input[type=text] {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 0 1px #4dd0e1;
+}
+.butn{
+    border-radius: 20px;
+    justify-content: center;
+    font-family: verdana;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:none;
+    background-color: #fff;
+    cursor: pointer;
+
+  }
+
+.heading{
+    font-size: 40px;
+    font-family: impact;
+    color: #000;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #fff;
+    width:70%;
+  }
+  a{
+    text-decoration: none;
+  }
+
+    </style>
+  </head>
+
+  <body class="main">
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-bold">BUS MANAGER</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2" href="home_teach.html" style="text-decoration: none; color: #000; font-family: impact;">Home</a>
+                <a class="p-2 text-dark" href="faculty_editBus.html" style="text-decoration: none; color: #000; font-family: impact;">Change bus</a>
+        <a class="p-2" href="change_pass_teach.html" style="text-decoration: none; color: #000; font-family: impact;">Change password</a>
+        <a class="p-2" href="#" style="text-decoration: none; color: #000; font-family: impact;">Logout</a>
+      </nav>
+    </div>
+    <center>
+<h2 class="heading">Search Bus using route or by Bus Number</h2></center>
+
+   <div class="container" style="padding-top: 5%;">
+     <div class="card-deck mb-3 text-center">
+     <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">search by route</h4>
+          </div>
+          <div class="card-body">
+            <div class="active-cyan-3 active-cyan-4 mb-4">
+            <input class="form-control" type="text" placeholder="Enter place" aria-label="Search">
+            </div>
+            <button type="button" class="btn btn-lg btn-block btn-primary" style="color:#fff">Search</button>
+    <p class="list-unstyled mt-3 mb-4">
+      
+    </p>
+          </div>
+        </div>
+        
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">search by bus</h4>
+          </div>
+          <div class="card-body">
+              <div class="active-cyan-3 active-cyan-4 mb-4">
+            <input class="form-control" type="text" placeholder="Bus No" aria-label="Search">
+            </div>
+
+            <button type="button" class="btn btn-lg btn-block btn-primary" style=" color:#fff " onclick="busDetail()">Search</button>
+      <p id="bus_r" class="list-unstyled mt-3 mb-4" ></p>
+          </div>
+        </div>
+
+   </div>
+   <center>
+<div class="card-body" style="width: 40%;" >
+        <button class="butn" onclick="show()">View all bus</button>
+        </div>
+        </center>
+</div>
+
+<center>
+<div class="table-responsive" style="width: 60%;padding-top:2%;background-color: white; border-radius: 30px;display: none;align-content: center;flex-direction: column;" id="view-all">
+      <h1 style="padding-bottom: 2%;">All bus routes</h1>
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Bus Number</th>
+                  <th>Route</th>
+                  <th>Route</th>
+                  <th>Route</th>
+                  <th>Route</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CHD101</td>
+                  <td>sec-32 </td>
+                  <td>sec-43</td>
+                  <td>sec-35</td>
+                  <td>sec-46</td>
+                  </tr>
+                <tr>
+                  <td>CHD111</td>
+                  <td>sec-33 </td>
+                  <td>sec-45</td>
+                  <td>sec-36</td>
+                  <td>sec-53</td>
+                  </tr>
+                <tr>
+                  <td>CHD201</td>
+                  <td>sec-9 </td>
+                  <td>sec-15</td>
+                  <td>sec-23</td>
+                  <td>sec-24</td>
+                  </tr>
+                <tr>
+                  <td>CHD151</td>
+                  <td>sec-56 </td>
+                  <td>sec-42</td>
+                  <td>sec-35</td>
+                  <td>sec-16</td>
+                  </tr>
+                <tr>
+                  <td>CHD135</td>
+                  <td>sec-34 </td>
+                  <td>sec-54</td>
+                  <td>sec-70</td>
+                  <td>sec-77</td>
+                  </tr>
+                <tr>
+                  <td>PKL215</td>
+                  <td>sec-12 </td>
+                  <td>sec-31</td>
+                  <td>sec-15</td>
+                  <td>sec-25</td>
+                   </tr>
+                <tr>
+                  <td>PKL225</td>
+                  <td>sec-22 </td>
+                  <td>sec-11</td>
+                  <td>sec-16</td>
+                  <td>sec-18</td>
+                </tr>
+
+
+</tbody>
+</table>
+</div>
+</center>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+      function busDetail(){
+         document.getElementById('view-all').style.display='flex';
+       /* var str="driver: " ;var st ="<br> route : " ;
+        document.getElementById("bus_r").innerHTML=str+st;
+        document.getElementsByClassName('container').style.paddingTop="5% ";*/
+      }
+
+      function show(){
+        document.getElementById('view-all').style.display='flex';
+      }
+
+      
+    </script>
+  </body>
+</html>
